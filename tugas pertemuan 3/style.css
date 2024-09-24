@@ -1,0 +1,225 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    align-items: center; /* Menyelaraskan elemen vertikal */
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    margin-top: 17px;
+    display: flex; /* Membuat ul sebagai flexbox */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(/wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
+    height: 50vh;
+    color: #fff;
+    padding: 50px 0;
+    display: flex;
+    align-items: center; /* Menyelaraskan isi secara vertikal */
+    justify-content: center; /* Menyelaraskan isi secara horizontal */
+    text-align: center;
+}
+
+.hero h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Content Section */
+.jumbotron {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.jumbotron h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #2C3E50;
+}
+
+.jumbotron p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #7f8c8d;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Content Grid Layout */
+.content .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.content .item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.content .item h4 {
+    font-size: 20px;
+    color: #2C3E50;
+}
+
+.content .item p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.content .item1 {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/* Link Styles */
+.content .item1 a {
+    text-decoration: none;
+    margin-top: 10px;
+    border: 1px solid;
+    color: #007bff;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border-color: #007bff;
+    display: inline-block; 
+}
+ 
+.content .item1 a:hover {
+    background-color: #007bff; 
+    color: #ffffff; 
+}
+
+/* Menu Styles */
+#menu {
+    margin-bottom: 30px; 
+    border: 1px solid #fff; 
+    padding: 40px; 
+    border-radius: 10px;
+    background-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Mengatur header menjadi kolom */
+        align-items: center; /* Menyelaraskan konten secara horizontal */
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Mengatur navigasi menjadi kolom */
+        align-items: center; /* Menyelaraskan item navigasi */
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .content .item1 {
+        grid-column-start: 1; /* Mengubah agar item1 berada dalam satu kolom */
+        grid-column-end: -1;
+    }
+}
+
+/* Mobile View Adjustment */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 20px; /* Mengurangi ukuran font judul pada layar kecil */
+    }
+
+    .hero p {
+        font-size: 16px; /* Mengurangi ukuran font paragraf pada layar kecil */
+    }
+
+    .content .item h4 {
+        font-size: 18px; /* Mengurangi ukuran font judul pada layar kecil */
+    }
+
+    .content .item p {
+        font-size: 12px; /* Mengurangi ukuran font paragraf pada layar kecil */
+    }
+
+    .content .item1 a {
+        padding: 8px; /* Mengurangi padding link */
+        width: 100%; /* Membuat link memenuhi lebar kontainer */
+    }
+}

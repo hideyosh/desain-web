@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(/img/sunny.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+
+}
+.weather-info {
+    margin-bottom: 15px;
+}
+.forecast {
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+}
+.day {
+    padding: 17px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 7.5px;
+    text-shadow: 1px 1.5px 2.8px rgba(0, 0, 0, 0.2); 
+}
+
+.card-weather {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px 60px 40px 60px;
+    border-radius: 10px;
+    width: 80rem;
+    height: 28rem;
+    text-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.2); 
+}
+

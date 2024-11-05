@@ -49,7 +49,7 @@ function tambahBuku() {
 
 // Fungsi untuk menyimpan daftar buku ke Local Storage
 function simpanDaftarBuku() {
-    localStorage.setItem('daftarBuku', JSON.stringify(daftarBuku));
+    sessionStorage.setItem('daftarBuku', JSON.stringify(daftarBuku));
 }
 
 // Fungsi untuk menampilkan daftar buku
@@ -101,7 +101,7 @@ function hapusBuku(index) {
 
 // Fungsi untuk menyimpan buku favorit ke Local Storage
 function simpanBukuFavorit() {
-    localStorage.setItem('bukuFavorit', JSON.stringify(bukuFavorit));
+    sessionStorage.setItem('bukuFavorit', JSON.stringify(bukuFavorit));
 }
 
 // Fungsi untuk menampilkan buku favorit
@@ -158,8 +158,8 @@ function tampilkanNamaPengguna() {
 // Memuat data saat halaman dimuat
 window.onload = function () {
     // Memuat daftar buku dari Local Storage
-    if (localStorage.getItem('daftarBuku')) {
-        const storedBooks = JSON.parse(localStorage.getItem('daftarBuku'));
+    if (sessionStorage.getItem('daftarBuku')) {
+        const storedBooks = JSON.parse(sessionStorage.getItem('daftarBuku'));
         // Rekonstruksi objek buku menjadi instance dari kelas Buku
         daftarBuku = storedBooks.map(book => {
             return new Buku(book.judul, book.penulis, book.tahun);
@@ -168,8 +168,8 @@ window.onload = function () {
     }
 
     // Memuat buku favorit dari Local Storage
-    if (localStorage.getItem('bukuFavorit')) {
-        const storedFavorites = JSON.parse(localStorage.getItem('bukuFavorit'));
+    if (sessionStorage.getItem('bukuFavorit')) {
+        const storedFavorites = JSON.parse(sessionStorage.getItem('bukuFavorit'));
         // Rekonstruksi objek buku menjadi instance dari kelas Buku
         bukuFavorit = storedFavorites.map(book => {
             return new Buku(book.judul, book.penulis, book.tahun);
